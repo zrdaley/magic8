@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Magic ∞ Ball</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    
+    
+
+  </head>
+  
+  <body background = "http://dreamatico.com/data_images/space/space-4.jpg" style="background-repeat: no-repeat; background-size: cover;">
+  <center>
+    <h1 style="color:#grey; font-family:Century Gothic;">Magic ∞ Ball</h1>
+  </center>
+
+<div class = "col-lg-5 col-centered" id="canvas" >
+  <svg height="500" width="500">
+        <filter id="dropShadow">
+           <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+            <feOffset dx="0" dy="0" />
+            <feMerge>
+              <feMergeNode />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="blurCirc">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+        </filter>
+        <filter id="blurTri">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+        </filter>
+    <circle r="200" cx = "250" cy = "250" height="90" stroke="black" stroke-width="2" fill="black" filter="url(#dropShadow)" />
+    <circle r="160" cx = "250" cy = "250" height="90" stroke="#424242" stroke-width="2" fill="#0E0C17" filter="url(#blurCirc)" />
+    <circle r = "90" cx = "250" cy = "250" height="90" stroke="grey" stroke-width="2" fill="#white" filter="url(#dropShadow)"  />
+    <polygon points="250,320 190,210 310,210" style="fill:#2d2d86;stroke:#3939ac;stroke-width:1" filter ="url(#blurTri)"/>
+    <g>
+        <polygon points="250,320 190,210 310,210" style="fill:#6757A1;stroke:#4F4378;stroke-width:1" />
+        <text x="50%" y="50%" text-anchor="middle" font-family="Century Gothic" font-size="9" fill="white" style = "stroke:#ADADAD;stroke-width:0.3px"> 
+                <tspan id = "ans1" x="50%" y="48%" text-anchor="middle"></tspan>
+                <tspan id = "ans2" x="50%" y="51%" text-anchor="middle"></tspan>
+        </text>
+    </g>
+
+  </svg>
+    <button class="btn btn-primary center-block" onclick = "shake();">Shake</button>
+
+</div>
+
+
+
+</body>
+</html>
+  
+
+
+  
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
