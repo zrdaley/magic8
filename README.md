@@ -1,5 +1,5 @@
 # Magic8
-A responsive magic 8 ball web app.
+A responsive magic 8 ball web app!
 
 ##Instructions
 Clone the Magic8 respository
